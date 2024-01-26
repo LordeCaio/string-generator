@@ -85,7 +85,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>br.com.macedocaio.CodeGeneratorApplication</mainClass>
+                            <mainClass>br.com.macedocaio.codegenerator.CodeGeneratorApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
