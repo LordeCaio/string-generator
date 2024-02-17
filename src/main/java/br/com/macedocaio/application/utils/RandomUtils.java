@@ -1,12 +1,18 @@
-package br.com.macedocaio.codegenerator.utils;
+package br.com.macedocaio.application.utils;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.UUID;
 
+/**
+ * Utility class utilized to create a {@link SecureRandom} instance with random seed
+ */
 public final class RandomUtils {
 
-    public static final String DEFAULT_ALGORITHM = "SHA1PRNG";
+    /**
+     * Default {@link SecureRandom} algorithm
+     */
+    public static final String SHA1PRNG_ALGORITHM = "SHA1PRNG";
 
     /**
      * Try to generate a {@link SecureRandom} instance using SHA1PRNG
@@ -19,7 +25,7 @@ public final class RandomUtils {
 
         SecureRandom random;
         try {
-            random = SecureRandom.getInstance(DEFAULT_ALGORITHM);
+            random = SecureRandom.getInstance(SHA1PRNG_ALGORITHM);
             random.setSeed(uuidBytes);
         } catch (NoSuchAlgorithmException e) {
             random = new SecureRandom(uuidBytes);

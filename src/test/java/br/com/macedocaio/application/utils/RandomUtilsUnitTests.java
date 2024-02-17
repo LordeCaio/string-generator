@@ -1,4 +1,4 @@
-package br.com.macedocaio.codegenerator.utils;
+package br.com.macedocaio.application.utils;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -33,7 +33,7 @@ public class RandomUtilsUnitTests {
             SecureRandom actual = RandomUtils.createSecureRandom();
 
             assertNotNull(actual);
-            assertEquals(RandomUtils.DEFAULT_ALGORITHM, actual.getAlgorithm());
+            assertEquals(RandomUtils.SHA1PRNG_ALGORITHM, actual.getAlgorithm());
         }
     }
 
@@ -49,7 +49,7 @@ public class RandomUtilsUnitTests {
             SecureRandom actual = RandomUtils.createSecureRandom();
 
             assertNotNull(actual);
-            assertNotEquals(RandomUtils.DEFAULT_ALGORITHM, actual.getAlgorithm());
+            assertNotEquals(RandomUtils.SHA1PRNG_ALGORITHM, actual.getAlgorithm());
         }
     }
 }

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.macedocaio</groupId>
-    <artifactId>CodeGenerator</artifactId>
+    <artifactId>StringGenerator</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
@@ -85,7 +85,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>br.com.macedocaio.codegenerator.CodeGeneratorApplication</mainClass>
+                            <mainClass>br.com.macedocaio.application.StringGeneratorApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
