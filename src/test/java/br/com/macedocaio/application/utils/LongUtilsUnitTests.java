@@ -37,8 +37,8 @@ public class LongUtilsUnitTests {
         try (MockedStatic<RandomUtils> uuidMock = mockStatic(RandomUtils.class)) {
             uuidMock.when(RandomUtils::createSecureRandom).thenReturn(secureRandom);
 
-            var randomBitFlag = 0x43FF_4300_57FF_5700L;
-            var variantBitFlag = 0x1200_2400_3600_4800L;
+            long randomBitFlag = 0x43FF_4300_57FF_5700L;
+            long variantBitFlag = 0x1200_2400_3600_4800L;
 
             Long generated = LongUtils.generateRandomBits(randomBitFlag, variantBitFlag);
 
