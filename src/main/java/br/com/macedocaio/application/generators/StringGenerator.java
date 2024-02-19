@@ -50,7 +50,7 @@ public class StringGenerator {
         checkLength(length);
 
         String splitRegex = "(?<=\\G.{%d})";
-        int charsetLength = charset.length();
+        int charsetLength = String.valueOf(charset.length()).length();
 
         String[] numbers = generateNumericString().split(splitRegex.formatted(charsetLength));
         SecureRandom random = RandomUtils.createSecureRandom();
@@ -61,7 +61,10 @@ public class StringGenerator {
             int randomIndex = random.nextInt(numbersLength) * random.nextInt(numbersLength);
             int calculatedIndex = randomIndex % charset.length();
             char character = charset.charAt(calculatedIndex);
-            sb.append(character);
+
+            sb.append(Math.round(random.nextFloat()) == 0
+                      ? Character.toUpperCase(character)
+                      : Character.toLowerCase(character));
         }
 
         return sb.toString();
