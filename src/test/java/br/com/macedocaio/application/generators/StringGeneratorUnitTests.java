@@ -53,7 +53,7 @@ public class StringGeneratorUnitTests {
 
         stringGenerator = builder.setStrategy(GenerationStrategy.CUSTOM).setCharset(elderFutharkCharset).build();
 
-        Pattern pattern = Pattern.compile("[" + elderFutharkCharset + "]+");
+        Pattern pattern = Pattern.compile("[" + elderFutharkCharset + elderFutharkCharset.toUpperCase() + "]+");
         String actual = stringGenerator.generate(maxLength);
 
         assertNotNull(actual);
